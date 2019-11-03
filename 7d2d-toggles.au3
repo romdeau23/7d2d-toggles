@@ -1,4 +1,4 @@
-; 7d2d toggles v0.1.0 by romdeau23
+; 7d2d toggles v0.1.1 by romdeau23
 ; https://github.com/romdeau23/7d2d-toggles
 
 #include <MsgBoxConstants.au3>
@@ -79,6 +79,19 @@ Global $KEY_DOWN_HANDLERS = [ _
 
 Global Const $KEY_UP_HANDLERS = [ _
 	"StartSprinting", _	; LSHIFT
+	"StopSprinting", _	; W
+	"Noop", _			; A
+	"Noop", _			; S
+	"Noop", _			; D
+	"Noop", _			; E
+	"Noop", _			; XBUTTON2
+	"Noop", _			; ADD
+	"Noop", _			; TAB
+	"Noop" _			; ESCAPE
+]
+
+Global Const $KEY_RESET_HANDLERS = [ _
+	"Noop", _			; LSHIFT
 	"StopSprinting", _	; W
 	"Noop", _			; A
 	"Noop", _			; S
@@ -256,9 +269,10 @@ While 1
 				EndIf
 			EndIf
 		ElseIf IsKeyToggled($i) Then
-			; toggle cancelled by user
-			Debug("[CANCEL] %s", $KEY_NAMES[$i])
+			; toggle interrupted by user
+			Debug("[RESET] %s %s()", $KEY_NAMES[$i], $KEY_RESET_HANDLERS[$i])
 			ToggleReset($KEY_TOGGLES[$i])
+			Call($KEY_RESET_HANDLERS[$i])
 			$keyDownTimes[$i] = Null
 		ElseIf $keyDownTimes[$i] <> Null Then
 			; run key up handler
