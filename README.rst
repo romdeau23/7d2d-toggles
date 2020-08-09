@@ -29,7 +29,7 @@ Pressing ``+`` (on the numpad) makes the player (or vehicle) run forward until c
 Auto-mine
 =========
 
-Pressing ``XBUTTON2`` (second extended mouse button) will hold down
+Pressing ``XBUTTON1`` (first extended mouse button) will hold down
 the primary mouse button for you.
 
 

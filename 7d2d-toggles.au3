@@ -32,7 +32,7 @@ Global Const $KEYS = [ _
 	Hex($VK_S, 2), _
 	Hex($VK_D, 2), _
 	Hex($VK_E, 2), _
-	Hex($VK_XBUTTON2, 2), _
+	Hex($VK_XBUTTON1, 2), _
 	Hex($VK_ADD, 2), _
 	Hex($VK_TAB, 2), _
 	Hex($VK_ESCAPE, 2) _
@@ -45,7 +45,7 @@ Global Const $KEY_NAMES = [ _
 	"S", _
 	"D", _
 	"E", _
-	"XBUTTON2", _
+	"XBUTTON1", _
 	"ADD", _
 	"TAB", _
 	"ESCAPE" _
@@ -58,7 +58,7 @@ Global Const $KEY_A = 2
 Global Const $KEY_S = 3
 Global Const $KEY_D = 4
 Global Const $KEY_E = 5
-Global Const $KEY_XBUTTON2 = 6
+Global Const $KEY_XBUTTON1 = 6
 Global Const $KEY_ADD = 7
 Global Const $KEY_TAB = 8
 Global Const $KEY_ESCAPE = 9
@@ -71,7 +71,7 @@ Global $KEY_DOWN_HANDLERS = [ _
 	"StopAutorun", _	; S
 	"Noop", _			; D
 	"Reset", _			; E
-	"ToggleMouse", _	; XBUTTON2
+	"ToggleMouse", _	; XBUTTON1
 	"ToggleAutorun", _ 	; ADD
 	"Reset", _			; TAB
 	"Reset" _			; ESCAPE
@@ -84,7 +84,7 @@ Global Const $KEY_UP_HANDLERS = [ _
 	"Noop", _			; S
 	"Noop", _			; D
 	"Noop", _			; E
-	"Noop", _			; XBUTTON2
+	"Noop", _			; XBUTTON1
 	"Noop", _			; ADD
 	"Noop", _			; TAB
 	"Noop" _			; ESCAPE
@@ -97,7 +97,7 @@ Global Const $KEY_RESET_HANDLERS = [ _
 	"Noop", _			; S
 	"Noop", _			; D
 	"Noop", _			; E
-	"Noop", _			; XBUTTON2
+	"Noop", _			; XBUTTON1
 	"Noop", _			; ADD
 	"Noop", _			; TAB
 	"Noop" _			; ESCAPE
