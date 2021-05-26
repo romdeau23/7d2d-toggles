@@ -1,4 +1,4 @@
-; 7d2d toggles v0.1.1 by romdeau23
+; 7d2d toggles v0.1.2 by romdeau23
 ; https://github.com/romdeau23/7d2d-toggles
 
 #include <MsgBoxConstants.au3>
